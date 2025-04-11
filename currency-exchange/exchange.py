@@ -1,3 +1,6 @@
+"""Module provides some arithmetic functions for friend Chandler's currency exchange calculator app.
+"""
+
 def exchange_money(budget, exchange_rate):
     """Function returns value of the exchanged currency.
 
@@ -70,6 +73,5 @@ def exchangeable_value(budget, exchange_rate, spread, denomination):
     vendor_exchange_rate = exchange_rate + (exchange_rate * spread_rate)
     vendor_exchange_value = budget / vendor_exchange_rate
     number_of_bills = vendor_exchange_value // denomination
-    vendor_exchange_value_per_policy = int(number_of_bills * denomination)
-
-    return vendor_exchange_value_per_policy
+    
+    return int(number_of_bills * denomination)
